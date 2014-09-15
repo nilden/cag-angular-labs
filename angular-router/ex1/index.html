@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularUI Route 1</title>
+    </head>
+    <body ng-app="myApp" ng-controller="MainController">
+        <ul>
+            <a href="#/view1">Visa vy 1</a>
+            <a href="#/view2">Visa vy 2</a>
+        </ul>
+        <hr />
+        <div class="content">
+            <!-- Ange var vymall skall in -->
+            <div ng-view></div>
+        </div>
+        <hr />
+        <pre>$location.path() = {{$location.path()}}</pre>
+        <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+        <pre>$route.current.params = {{$route.current.params}}</pre>
+        <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+        <pre>$routeParams = {{$routeParams}}</pre>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
+    <script src="app.js"></script>
+</html>
