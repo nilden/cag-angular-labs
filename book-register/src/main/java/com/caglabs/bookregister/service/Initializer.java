@@ -36,16 +36,36 @@ public class Initializer {
         Author author1 = new Author(
                 "Stephen",
                 "Hawking",
-                new GregorianCalendar(1942, 1, 8).getTime(),
+                new GregorianCalendar(1942, 0, 8).getTime(),
+                Lists.<Book>newArrayList());
+        Author author2 = new Author(
+                "Isaac",
+                "Newton",
+                new GregorianCalendar(1642, 11, 25).getTime(),
                 Lists.<Book>newArrayList());
         Book book1 = new Book(
                 "The Grand Design",
                 newArrayList(author1),
                 "0-553-80537-1",
-                new GregorianCalendar(2010, 9, 7).getTime());
+                new GregorianCalendar(2010, 7, 7).getTime());
         book1.authors.add(author1);
+        Book book2 = new Book(
+                "Black Holes and Baby Universes and Other Essays",
+                newArrayList(author1),
+                "0307790452",
+                new GregorianCalendar(2011, 0, 1).getTime());
+        book2.authors.add(author1);
+        Book book3 = new Book(
+                "Philosophiae Naturalis Principia Mathematica",
+                newArrayList(author2),
+                "9780762420223",
+                new GregorianCalendar(1687, 0, 1).getTime());
+
         entityManager.persist(author1);
+        entityManager.persist(author2);
         entityManager.persist(book1);
+        entityManager.persist(book2);
+        entityManager.persist(book3);
         entityManager.flush();
         System.out.printf("Initialization complete!!!!\n");
     }
