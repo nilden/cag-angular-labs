@@ -1,3 +1,12 @@
+REST-server: Bokregister
+========================
+# Bygga och köra
+
+    $ mvn clean package
+    $ java -jar target/book-register-1.0-SNAPSHOT.jar
+
+Surfa in på http://localhost:8080
+
 ## REST-API
 ### Skapa en ny bok
 
