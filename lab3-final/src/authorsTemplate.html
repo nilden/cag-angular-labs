@@ -1,1 +1,19 @@
-Fyll i författare
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="author in authors">
+                <a ng-click="select(book)">{{author.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <dl class="dl-horizontal">
+            <dt>Förnamn:</dt>
+            <dd>{{selectedAuthor.forename}}</dd>
+            <dt>Efternamn:</dt>
+            <dd>{{selectedAuthor.surname}}</dd>
+            <dt>Födelsedatum:</dt>
+            <dd>{{selectedAuthor.birthdate}}</dd>
+        </dl>
+    </div>
+</div>

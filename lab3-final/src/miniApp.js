@@ -27,6 +27,22 @@ angular.module('miniApp', ['ngRoute'])
     }
   })
 
+  .controller('AuthorsCtrl', function($scope, $http) {
+    $http.get('http://localhost:8080/authors')
+      .success(function(data, status, headers, config){
+        console.log('data: %o, status: %o, headers: %o, config: %o', data, status, headers(), config);
+        $scope.books = data._embedded ? data._embedded.authors : [];
+      })
+      .error(function(data, status, headers, config) {
+        console.log('data: %o, status: %o, headers: %o, config: %o', data, status, headers(), config);
+        alert('Schmäll!!!\nFelkod: '+status+', felinfo: "'+data+'"');
+      });
+
+    $scope.select = function(author) {
+      $scope.selectedAuthors = author;
+    }
+  })
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/books', {
@@ -34,7 +50,8 @@ angular.module('miniApp', ['ngRoute'])
         controller: 'BooksCtrl'
       })
       .when('/authors', {
-        templateUrl: 'authorsTemplate.html'
+        templateUrl: 'authorsTemplate.html',
+        controller: 'AuthorsCtrl'
       })
       .otherwise({
         redirectTo: '/books'
