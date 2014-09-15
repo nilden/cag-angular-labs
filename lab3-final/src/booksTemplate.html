@@ -6,10 +6,12 @@
             </li>
         </ul>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8" ng-show="selectedBook !== undefined">
         <dl class="dl-horizontal">
             <dt>Titel:</dt>
             <dd>{{selectedBook.title}}</dd>
+            <dt>Författare:</dt>
+            <dd><span ng-repeat="author in selectedBook.authors">{{author.forename}} {{author.surname}}<br/></span></dd>
             <dt>ISBN:</dt>
             <dd>{{selectedBook.isbn}}</dd>
             <dt>Utgiven:</dt>

@@ -2,7 +2,7 @@
     <div class="col-md-4">
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="author in authors">
-                <a ng-click="select(book)">{{author.name}}</a>
+                <a ng-click="select(author)">{{author.surname}}, {{author.forename}}</a>
             </li>
         </ul>
     </div>
@@ -13,7 +13,7 @@
             <dt>Efternamn:</dt>
             <dd>{{selectedAuthor.surname}}</dd>
             <dt>Födelsedatum:</dt>
-            <dd>{{selectedAuthor.birthdate}}</dd>
+            <dd>{{selectedAuthor.birthDate}}</dd>
         </dl>
     </div>
 </div>
