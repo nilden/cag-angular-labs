@@ -5,17 +5,44 @@
         <title>AngularJS CAG Lab</title>
         <link rel="stylesheet" href="../vendor/bootstrap-3.2.0-dist/css/bootstrap.css">
         <link rel="stylesheet" href="styles.css">
+        <script src="../vendor/jquery-1.11.1.js"></script>
+        <script src="../vendor/angular.js"></script>
+        <script src="../vendor/angular-route.js"></script>
+        <script src="../vendor/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+        <script src="miniApp.js"></script>
     </head>
-    
+
     <body ng-app="miniApp">
-        <h1>AngularJS CAG Lab</h1>
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button"
+                            class="navbar-toggle collapsed"
+                            data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">CAG ngLab</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <div class="section">
             En variabel på $scope: {{myOwnVar}}<br>
             <input type="text" ng-model="myOwnVar">
         </div>
-    </body>
 
-    <script src="../vendor/angular.js"></script>
-    <script src="../vendor/angular-route.js"></script>
-    <script src="miniApp.js"></script>
+    </body>
 </html>
