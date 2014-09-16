@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 public class Book extends AbstractEntity {
     public String title;
-    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH}, mappedBy = "publications")
     public List<Author> authors;
     public String isbn;
     @Temporal(TemporalType.DATE)
