@@ -28,7 +28,7 @@ public class Initializer {
     @Autowired
     private EntityManager entityManager;
 
-    @RequestMapping(method = RequestMethod.POST, value = "/init")
+    @RequestMapping(method = {RequestMethod.POST, RequestMethod.GET}, value = "/init")
     @ResponseBody
     @Transactional
     public void initialize() {
