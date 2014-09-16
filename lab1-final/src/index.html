@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>CAG ngLab</title>
+        <script src="../vendor/angular.js"></script>
+        <script src="miniApp.js"></script>
+        <script src="MiniCtrl.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body ng-app="miniApp">
+
+        <h1>AngularJS lab</h1>
+
+        <div ng-controller="MiniCtrl">
+
+            <div class="section" ng-form name="addBookForm">
+                Ny bok: {{myNewBook}}<br>
+                <input type="text" ng-model="myNewBook" required><br>
+                <button ng-click="addBook(myNewBook)">Lägg till bok</button>
+                <span style="color: red">{{errorMsg}}</span>
+            </div>
+
+            <div class="section">
+                Counter: {{counter}}
+            </div>
+
+            <div class="section">
+                Books: {{books}}
+                <ul>
+                    <li ng-repeat="book in books">
+                        Title: {{book}}
+                        <button ng-click="removeBook(book)">Ta bort</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section" ng-if="showDate()">
+                {{rightNow | date:'yyyy-MM-dd'}}
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </body>
+</html>
