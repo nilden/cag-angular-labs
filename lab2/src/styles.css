@@ -2,7 +2,6 @@ body {
     background-color: #27CCA7;
     font-family: 'Open Sans', sans-serif;
     margin: 10px;
-    padding-top: 70px; /* For Bootstrap top navbar */
 }
 
 .section {
