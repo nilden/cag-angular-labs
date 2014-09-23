@@ -8,7 +8,9 @@ import java.util.Date;
 @Entity
 public class Artist extends AbstractEntity {
 
-    /** This is the first name of the artist. */
+    /** This is the first name of the artist.
+     *
+     * */
     public String forename;
     public String surname;
     @Temporal(TemporalType.DATE)
