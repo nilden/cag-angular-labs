@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="author in authors">
+                <a ng-click="select(author)">{{author.surname}}, {{author.forename}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8" ng-show="selectedAuthor !== undefined">
+        <dl class="dl-horizontal">
+            <dt>Förnamn:</dt>
+            <dd>{{selectedAuthor.forename}}</dd>
+            <dt>Efternamn:</dt>
+            <dd>{{selectedAuthor.surname}}</dd>
+            <dt>Födelsedatum:</dt>
+            <dd>{{selectedAuthor.birthDate}}</dd>
+        </dl>
+    </div>
+</div>

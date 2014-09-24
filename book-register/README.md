@@ -7,6 +7,9 @@ REST-server: Bokregister
 
 Surfa in på http://localhost:8080
 
+## Initiera DB
+Initiera DB med några böcker: GET eller POST http://localhost:8080/init
+
 ## REST-API
 ### Skapa en ny bok
 
